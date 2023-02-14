@@ -53,7 +53,7 @@ FORK RELATED NOTE ::
 ANSURE YOU 1ST DOWNLOAD node_modules file
 
 POSTMAN REQUESTS LINK :-
- https://gold-station-986646.postman.co/workspace/Team-Workspace~08a06657-fb20-44c4-80a2-6aba34aa30ca/collection/25230534-db6c784c-3da1-4d2c-b1c7-b6678353af4e?action=share&creator=25230534
+https://api.postman.com/collections/25230534-db6c784c-3da1-4d2c-b1c7-b6678353af4e?access_key=PMAT-01GS7KCC4701FQRJYN0J57H1MW
 
 
 DRIVE LINK :-
