@@ -1,5 +1,5 @@
 var sid = 'ACfcbef58c13b67adc7e2bafdd313f7769';
-var auth_token = '75c391d58a64ba60c381aeed89fe7aad';
+var auth_token = '9631cbe713cdb6e671b8cbcdbc72e0b5';
 const express = require('express');
 const bodyParser = require('body-parser');
 const collection = require("./connection")
@@ -13,11 +13,20 @@ app.post('/report_crime', async (req, res) => {
 
 const { type, location, details,code,phone_number} = req.body;
   // You could add code here to validate the incoming data and save it to a database
+   var error_found = 0;
+  
+   
+
 
   try{
     const check = await collection.findOne({Crime_Code:req.body.code})
+   
     
+
+
     if(check.Crime_Code===req.body.code){
+
+      
       twilio.messages
     .create({
       from: "+15618165682",
@@ -26,15 +35,16 @@ const { type, location, details,code,phone_number} = req.body;
     })
     .then(function(res) {console.log("message has sent!")})
     .catch(function(err)  {
-      console.log(err);
+       console.log(err);
     });
+
         res.json({
             STATUS : "Your Report successfully registed",
             Related_Crime_Branch_name : check.Related_Crime_Branch_name,
             Related_Crime_Officer_number : check.Related_Crime_Officer_number,
-            SMS : "We also send you a sms to you check it out" 
+            SMS : "We also send a massage to you number if number is verified by our bot"
         });
-    }
+      }
         }
         catch{
     res.json({ERROR : "wrong details but no worrry we try to help you"})
