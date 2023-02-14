@@ -42,12 +42,12 @@ const { type, location, details,code,phone_number} = req.body;
             STATUS : "Your Report successfully registed",
             Related_Crime_Branch_name : check.Related_Crime_Branch_name,
             Related_Crime_Officer_number : check.Related_Crime_Officer_number,
-            SMS : "We also send a massage to you number if number is verified by our bot"
+            SMS : "We also send a massage to your number if  the number is verified by our bot"
         });
       }
         }
         catch{
-    res.json({ERROR : "wrong details but no worrry we try to help you"})
+    res.json({ERROR : "wrong details but don't worrry we try to help you"})
         }
     
   
